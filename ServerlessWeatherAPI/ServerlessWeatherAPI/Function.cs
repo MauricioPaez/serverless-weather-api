@@ -71,7 +71,7 @@ public class Functions
 
                 var weatherRoot = JsonSerializer.Deserialize<WeatherRoot>(weatherResponse, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
-                if(weatherRoot is not null && weatherRoot.Weather is not null && weatherRoot.Main is not null)
+                if (weatherRoot is not null && weatherRoot.Weather is not null && weatherRoot.Main is not null)
                 {
                     var response = new GetWeatherResponseModel
                     {
@@ -83,10 +83,11 @@ public class Functions
                     };
 
                     return GetResponse(HttpStatusCode.OK, JsonSerializer.Serialize(response));
-                }else
+                }
+                else
                 {
                     return GetResponse(HttpStatusCode.NoContent, "No weather data found for the specified city");
-                }                
+                }
             }
             else
             {
@@ -120,11 +121,22 @@ public class Functions
 
     public static APIGatewayProxyResponse GetResponse(HttpStatusCode statusCode, string body)
     {
+        var headers = new Dictionary<string, string>();
+
+        if (statusCode == HttpStatusCode.OK)
+        {
+            headers.Add("Content-Type", "application/json");
+        }
+        else
+        {
+            headers.Add("Content-Type", "text/plain");
+        }
+
         var response = new APIGatewayProxyResponse
         {
             StatusCode = (int)statusCode,
             Body = body,
-            Headers = new Dictionary<string, string> { { "Content-Type", "text/plain" } }
+            Headers = headers
         };
 
         return response;
