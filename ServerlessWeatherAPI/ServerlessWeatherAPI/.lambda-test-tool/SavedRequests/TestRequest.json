@@ -1,8 +1,8 @@
 {
-  "body": "{\"test\":\"body\"}",
+  "body": "{}",
   "resource": "/{proxy+}",
-  "path": "/path/to/resource",
-  "httpMethod": "POST",
+  "path": "/weather",
+  "httpMethod": "GET",
   "queryStringParameters": {
     "city": "envigado",
     "countryCode": "co"
