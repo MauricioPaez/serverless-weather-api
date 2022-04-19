@@ -3,8 +3,8 @@ This API is published and ready to be used.
 
 ## Endpoints:
 BaseUrl - https://4q7sjxmzc5.execute-api.us-east-1.amazonaws.com/Prod
-* Hello - [BaseUrl/hello](https://4q7sjxmzc5.execute-api.us-east-1.amazonaws.com/Prod)/hello
-* GetWeather - [BaseUrl/weather](https://4q7sjxmzc5.execute-api.us-east-1.amazonaws.com/Prod)/weather. You must pass the following query parameters:
+* Hello - [BaseUrl/hello](https://4q7sjxmzc5.execute-api.us-east-1.amazonaws.com/Prod)
+* GetWeather - [BaseUrl/weather](https://4q7sjxmzc5.execute-api.us-east-1.amazonaws.com/Prod). You must pass the following query parameters:
     - city: name of the city from which you would like to know the weather
     - countryCode: city's ISO 3166 country code. Please refer to this [link](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes)
 
@@ -31,7 +31,7 @@ cd ServerlessWeatherAPI
 ```
 * Install Amazon.Lambda.Tools Global Tools
 ```
-    dotnet tool install -g Amazon.Lambda.Tools
+dotnet tool install -g Amazon.Lambda.Tools
 ```
 * Run the dotnet Amazon Lambda test tool
 ```
