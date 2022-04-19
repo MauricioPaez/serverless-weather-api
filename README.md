@@ -15,6 +15,7 @@ Example:
 * .NET 6 - C#
 * AWS API Gateway
 * AWS Lambda
+* AWS Secrets Manager
 
 ### Relevant Files:
 * Function.cs - class file containing the C# methods mapped to the functions declared in the template file

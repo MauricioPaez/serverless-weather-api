@@ -13,10 +13,11 @@ public class Functions
 
 {
     private static readonly HttpClient client = new();
-    private const string ApiKey = "d7fdd921901adca09c3ed0b0a9f7e70a";
     private const string ApiBaseUrl = "http://api.openweathermap.org";
     private const string GeoUrl = "/geo/1.0/direct";
     private const string WeatherUrl = "/data/2.5/weather";
+
+    private static string ApiKey = "";
 
     /// <summary>
     /// Default constructor that Lambda will invoke.
@@ -54,6 +55,12 @@ public class Functions
             if (client.BaseAddress is null)
             {
                 client.BaseAddress = new Uri($"{ApiBaseUrl}");
+            }
+
+            if (ApiKey == "")
+            {
+                ApiKey = SecretsManagerHelper.GetSecret();
+
             }
 
             var city = GetQueryParameter(request, "city");
