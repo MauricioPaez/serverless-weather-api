@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerlessWeatherAPI", "ServerlessWeatherAPI\ServerlessWeatherAPI.csproj", "{12609BB2-43FA-4D97-914F-A3919C0FF5BE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerlessWeatherAPI.Tests", "ServerlessWeatherAPI.Tests\ServerlessWeatherAPI.Tests.csproj", "{491DFADD-8AFB-4327-8BC2-F9762D079D47}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12609BB2-43FA-4D97-914F-A3919C0FF5BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12609BB2-43FA-4D97-914F-A3919C0FF5BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12609BB2-43FA-4D97-914F-A3919C0FF5BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12609BB2-43FA-4D97-914F-A3919C0FF5BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{491DFADD-8AFB-4327-8BC2-F9762D079D47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{491DFADD-8AFB-4327-8BC2-F9762D079D47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{491DFADD-8AFB-4327-8BC2-F9762D079D47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{491DFADD-8AFB-4327-8BC2-F9762D079D47}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D62507B2-BB08-45A9-A09D-D143A18D0BC5}
+	EndGlobalSection
+EndGlobal
